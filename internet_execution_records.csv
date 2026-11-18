@@ -1,0 +1,641 @@
+test_name,status,execution_timestamp,error_message
+the-internet/add-remove-elements.spec.ts::TC_019 - Add Element creates a Delete control [chromium],passed,2026-11-11T07:57:15.680Z,
+the-internet/add-remove-elements.spec.ts::TC_020 - Multiple added elements have independent Delete controls [chromium],passed,2026-11-11T07:57:15.676Z,
+the-internet/add-remove-elements.spec.ts::TC_021 - Delete removes one added control [chromium],passed,2026-11-11T07:57:15.684Z,
+the-internet/challenging-dom.spec.ts::TC_010 - Table exposes expected columns and ten data rows [chromium],passed,2026-11-11T07:57:15.667Z,
+the-internet/challenging-dom.spec.ts::TC_011 - Edit action targets its row without removing table data [chromium],passed,2026-11-11T07:57:15.692Z,
+the-internet/challenging-dom.spec.ts::TC_012 - Delete action link target is row-scoped [chromium],passed,2026-11-11T07:57:15.675Z,
+the-internet/disappearing-elements.spec.ts::TC_007 - Required navigation links render [chromium],passed,2026-11-11T07:57:26.345Z,
+the-internet/disappearing-elements.spec.ts::TC_008 - Home navigation returns to the index [chromium],passed,2026-11-11T07:57:28.755Z,
+the-internet/disappearing-elements.spec.ts::TC_009 - Reload retains required links despite optional entry variation [chromium],passed,2026-11-11T07:57:28.820Z,
+the-internet/dynamic-content.spec.ts::TC_016 - Dynamic content renders three text entries [chromium],passed,2026-11-11T07:57:28.837Z,
+the-internet/dynamic-content.spec.ts::TC_017 - Content changes after refresh [chromium],passed,2026-11-11T07:57:30.762Z,
+the-internet/dynamic-content.spec.ts::TC_018 - Static-content query mode opens [chromium],passed,2026-11-11T07:57:31.316Z,
+the-internet/dynamic-controls.spec.ts::TC_004 - Remove and restore the checkbox [chromium],passed,2026-11-11T07:57:32.445Z,
+the-internet/dynamic-controls.spec.ts::TC_005 - Enable input and enter text [chromium],passed,2026-11-11T07:57:32.729Z,
+the-internet/dynamic-controls.spec.ts::TC_006 - Disable an enabled input [chromium],passed,2026-11-11T07:57:33.987Z,
+the-internet/dynamic-loading.spec.ts::TC_001 - Existing hidden element becomes visible [chromium],passed,2026-11-11T07:57:34.500Z,
+the-internet/dynamic-loading.spec.ts::TC_002 - Dynamically inserted result appears after Start [chromium],failed,2026-11-11T07:57:35.798Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('Hello World!', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect ""toBeVisible"" getByText('Hello World!', { exact: true }) with timeout 5000ms
+  - waiting for getByText('Hello World!', { exact: true })
+
+
+  21 |
+  22 |     await page.getByRole('button', { name: 'Start' }).click();
+> 23 |     await expect(result).toBeVisible();
+     |                          ^
+  24 |     await expect(result).toHaveText('Hello World!');
+  25 |   });
+  26 |
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\dynamic-loading.spec.ts:23:26"
+the-internet/dynamic-loading.spec.ts::TC_003 - Loading indicator transitions to the final result [chromium],failed,2026-11-11T07:57:36.001Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('Hello World!', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect ""toBeVisible"" getByText('Hello World!', { exact: true }) with timeout 5000ms
+  - waiting for getByText('Hello World!', { exact: true })
+
+
+  30 |
+  31 |     const result = page.getByText('Hello World!', { exact: true });
+> 32 |     await expect(result).toBeVisible();
+     |                          ^
+  33 |     await expect(page.locator('#loading')).toBeHidden();
+  34 |   });
+  35 | });
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\dynamic-loading.spec.ts:32:26"
+the-internet/form-authentication.spec.ts::TC_013 - Valid credentials open the secure area [chromium],passed,2026-11-11T07:57:40.008Z,
+the-internet/form-authentication.spec.ts::TC_014 - Invalid username is rejected [chromium],passed,2026-11-11T07:57:42.930Z,
+the-internet/form-authentication.spec.ts::TC_015 - Invalid password is rejected [chromium],passed,2026-11-11T07:57:44.656Z,
+the-internet/javascript-alerts.spec.ts::TC_022 - Accept JavaScript alert [chromium],timedOut,2026-11-11T07:57:45.205Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Alert' })
+    - locator resolved to <button onclick=""jsAlert()"">Click for JS Alert</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+   7 |     await page.goto(`${baseUrl}/javascript_alerts`);
+   8 |     const dialogPromise = page.waitForEvent('dialog');
+>  9 |     await page.getByRole('button', { name: 'Click for JS Alert' }).click();
+     |                                                                    ^
+  10 |     const dialog = await dialogPromise;
+  11 |
+  12 |     expect(dialog.type()).toBe('alert');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:9:68"
+the-internet/javascript-alerts.spec.ts::TC_023 - Cancel JavaScript confirmation [chromium],timedOut,2026-11-11T07:57:45.491Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Confirm' })
+    - locator resolved to <button onclick=""jsConfirm()"">Click for JS Confirm</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+  19 |     await page.goto(`${baseUrl}/javascript_alerts`);
+  20 |     const dialogPromise = page.waitForEvent('dialog');
+> 21 |     await page.getByRole('button', { name: 'Click for JS Confirm' }).click();
+     |                                                                      ^
+  22 |     const dialog = await dialogPromise;
+  23 |
+  24 |     expect(dialog.type()).toBe('confirm');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:21:70"
+the-internet/javascript-alerts.spec.ts::TC_024 - Submit text through JavaScript prompt [chromium],timedOut,2026-11-11T07:57:47.004Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Prompt' })
+    - locator resolved to <button onclick=""jsPrompt()"">Click for JS Prompt</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+  31 |     await page.goto(`${baseUrl}/javascript_alerts`);
+  32 |     const dialogPromise = page.waitForEvent('dialog');
+> 33 |     await page.getByRole('button', { name: 'Click for JS Prompt' }).click();
+     |                                                                     ^
+  34 |     const dialog = await dialogPromise;
+  35 |
+  36 |     expect(dialog.type()).toBe('prompt');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:33:69"
+the-internet/multiple-windows.spec.ts::TC_028 - Click Here opens a new window [chromium],passed,2026-11-11T07:57:47.370Z,
+the-internet/multiple-windows.spec.ts::TC_029 - Parent remains on the opening page after popup opens [chromium],passed,2026-11-11T07:57:48.297Z,
+the-internet/multiple-windows.spec.ts::TC_030 - New Window route is directly accessible [chromium],passed,2026-11-11T07:57:49.588Z,
+the-internet/status-codes.spec.ts::TC_025 - Status Codes 200 endpoint responds successfully [chromium],passed,2026-11-11T07:57:52.117Z,
+the-internet/status-codes.spec.ts::TC_026 - Status Codes 301 endpoint returns its status response [chromium],passed,2026-11-11T07:57:52.133Z,
+the-internet/status-codes.spec.ts::TC_027 - Status Codes 404 endpoint shows not-found response [chromium],passed,2026-11-11T07:57:52.905Z,
+the-internet/add-remove-elements.spec.ts::TC_019 - Add Element creates a Delete control [chromium],passed,2026-11-11T07:58:26.085Z,
+the-internet/add-remove-elements.spec.ts::TC_020 - Multiple added elements have independent Delete controls [chromium],passed,2026-11-11T07:58:26.117Z,
+the-internet/add-remove-elements.spec.ts::TC_021 - Delete removes one added control [chromium],passed,2026-11-11T07:58:26.064Z,
+the-internet/challenging-dom.spec.ts::TC_010 - Table exposes expected columns and ten data rows [chromium],passed,2026-11-11T07:58:26.164Z,
+the-internet/challenging-dom.spec.ts::TC_011 - Edit action targets its row without removing table data [chromium],passed,2026-11-11T07:58:26.091Z,
+the-internet/challenging-dom.spec.ts::TC_012 - Delete action link target is row-scoped [chromium],passed,2026-11-11T07:58:26.084Z,
+the-internet/disappearing-elements.spec.ts::TC_007 - Required navigation links render [chromium],passed,2026-11-11T07:58:30.529Z,
+the-internet/disappearing-elements.spec.ts::TC_008 - Home navigation returns to the index [chromium],passed,2026-11-11T07:58:31.204Z,
+the-internet/disappearing-elements.spec.ts::TC_009 - Reload retains required links despite optional entry variation [chromium],passed,2026-11-11T07:58:31.356Z,
+the-internet/dynamic-content.spec.ts::TC_016 - Dynamic content renders three text entries [chromium],passed,2026-11-11T07:58:31.426Z,
+the-internet/dynamic-content.spec.ts::TC_017 - Content changes after refresh [chromium],passed,2026-11-11T07:58:32.010Z,
+the-internet/dynamic-content.spec.ts::TC_018 - Static-content query mode opens [chromium],passed,2026-11-11T07:58:33.207Z,
+the-internet/dynamic-controls.spec.ts::TC_004 - Remove and restore the checkbox [chromium],passed,2026-11-11T07:58:34.277Z,
+the-internet/dynamic-controls.spec.ts::TC_005 - Enable input and enter text [chromium],passed,2026-11-11T07:58:34.876Z,
+the-internet/dynamic-controls.spec.ts::TC_006 - Disable an enabled input [chromium],passed,2026-11-11T07:58:36.318Z,
+the-internet/dynamic-loading.spec.ts::TC_001 - Existing hidden element becomes visible [chromium],passed,2026-11-11T07:58:36.470Z,
+the-internet/dynamic-loading.spec.ts::TC_002 - Dynamically inserted result appears after Start [chromium],failed,2026-11-11T07:58:38.044Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('Hello World!', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect ""toBeVisible"" getByText('Hello World!', { exact: true }) with timeout 5000ms
+  - waiting for getByText('Hello World!', { exact: true })
+
+
+  21 |
+  22 |     await page.getByRole('button', { name: 'Start' }).click();
+> 23 |     await expect(result).toBeVisible();
+     |                          ^
+  24 |     await expect(result).toHaveText('Hello World!');
+  25 |   });
+  26 |
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\dynamic-loading.spec.ts:23:26"
+the-internet/dynamic-loading.spec.ts::TC_003 - Loading indicator transitions to the final result [chromium],failed,2026-11-11T07:58:40.206Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('Hello World!', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect ""toBeVisible"" getByText('Hello World!', { exact: true }) with timeout 5000ms
+  - waiting for getByText('Hello World!', { exact: true })
+
+
+  30 |
+  31 |     const result = page.getByText('Hello World!', { exact: true });
+> 32 |     await expect(result).toBeVisible();
+     |                          ^
+  33 |     await expect(page.locator('#loading')).toBeHidden();
+  34 |   });
+  35 | });
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\dynamic-loading.spec.ts:32:26"
+the-internet/form-authentication.spec.ts::TC_013 - Valid credentials open the secure area [chromium],passed,2026-11-11T07:58:43.838Z,
+the-internet/form-authentication.spec.ts::TC_014 - Invalid username is rejected [chromium],passed,2026-11-11T07:58:46.628Z,
+the-internet/form-authentication.spec.ts::TC_015 - Invalid password is rejected [chromium],passed,2026-11-11T07:58:47.801Z,
+the-internet/javascript-alerts.spec.ts::TC_022 - Accept JavaScript alert [chromium],timedOut,2026-11-11T07:58:47.939Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Alert' })
+    - locator resolved to <button onclick=""jsAlert()"">Click for JS Alert</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+   7 |     await page.goto(`${baseUrl}/javascript_alerts`);
+   8 |     const dialogPromise = page.waitForEvent('dialog');
+>  9 |     await page.getByRole('button', { name: 'Click for JS Alert' }).click();
+     |                                                                    ^
+  10 |     const dialog = await dialogPromise;
+  11 |
+  12 |     expect(dialog.type()).toBe('alert');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:9:68"
+the-internet/javascript-alerts.spec.ts::TC_023 - Cancel JavaScript confirmation [chromium],timedOut,2026-11-11T07:58:48.009Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Confirm' })
+    - locator resolved to <button onclick=""jsConfirm()"">Click for JS Confirm</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+  19 |     await page.goto(`${baseUrl}/javascript_alerts`);
+  20 |     const dialogPromise = page.waitForEvent('dialog');
+> 21 |     await page.getByRole('button', { name: 'Click for JS Confirm' }).click();
+     |                                                                      ^
+  22 |     const dialog = await dialogPromise;
+  23 |
+  24 |     expect(dialog.type()).toBe('confirm');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:21:70"
+the-internet/javascript-alerts.spec.ts::TC_024 - Submit text through JavaScript prompt [chromium],timedOut,2026-11-11T07:58:48.702Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Prompt' })
+    - locator resolved to <button onclick=""jsPrompt()"">Click for JS Prompt</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+  31 |     await page.goto(`${baseUrl}/javascript_alerts`);
+  32 |     const dialogPromise = page.waitForEvent('dialog');
+> 33 |     await page.getByRole('button', { name: 'Click for JS Prompt' }).click();
+     |                                                                     ^
+  34 |     const dialog = await dialogPromise;
+  35 |
+  36 |     expect(dialog.type()).toBe('prompt');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:33:69"
+the-internet/multiple-windows.spec.ts::TC_028 - Click Here opens a new window [chromium],passed,2026-11-11T07:58:49.222Z,
+the-internet/multiple-windows.spec.ts::TC_029 - Parent remains on the opening page after popup opens [chromium],passed,2026-11-11T07:58:51.960Z,
+the-internet/multiple-windows.spec.ts::TC_030 - New Window route is directly accessible [chromium],passed,2026-11-11T07:58:55.473Z,
+the-internet/status-codes.spec.ts::TC_025 - Status Codes 200 endpoint responds successfully [chromium],passed,2026-11-11T07:58:56.566Z,
+the-internet/status-codes.spec.ts::TC_026 - Status Codes 301 endpoint returns its status response [chromium],passed,2026-11-11T07:58:56.572Z,
+the-internet/status-codes.spec.ts::TC_027 - Status Codes 404 endpoint shows not-found response [chromium],passed,2026-11-11T07:58:58.442Z,
+the-internet/add-remove-elements.spec.ts::TC_019 - Add Element creates a Delete control [chromium],passed,2026-11-11T07:59:26.831Z,
+the-internet/add-remove-elements.spec.ts::TC_020 - Multiple added elements have independent Delete controls [chromium],passed,2026-11-11T07:59:26.904Z,
+the-internet/add-remove-elements.spec.ts::TC_021 - Delete removes one added control [chromium],passed,2026-11-11T07:59:26.861Z,
+the-internet/challenging-dom.spec.ts::TC_010 - Table exposes expected columns and ten data rows [chromium],passed,2026-11-11T07:59:26.877Z,
+the-internet/challenging-dom.spec.ts::TC_011 - Edit action targets its row without removing table data [chromium],passed,2026-11-11T07:59:26.905Z,
+the-internet/challenging-dom.spec.ts::TC_012 - Delete action link target is row-scoped [chromium],passed,2026-11-11T07:59:26.911Z,
+the-internet/disappearing-elements.spec.ts::TC_007 - Required navigation links render [chromium],passed,2026-11-11T07:59:31.785Z,
+the-internet/disappearing-elements.spec.ts::TC_008 - Home navigation returns to the index [chromium],passed,2026-11-11T07:59:32.032Z,
+the-internet/disappearing-elements.spec.ts::TC_009 - Reload retains required links despite optional entry variation [chromium],passed,2026-11-11T07:59:33.215Z,
+the-internet/dynamic-content.spec.ts::TC_016 - Dynamic content renders three text entries [chromium],passed,2026-11-11T07:59:34.731Z,
+the-internet/dynamic-content.spec.ts::TC_017 - Content changes after refresh [chromium],passed,2026-11-11T07:59:36.687Z,
+the-internet/dynamic-content.spec.ts::TC_018 - Static-content query mode opens [chromium],passed,2026-11-11T07:59:37.107Z,
+the-internet/dynamic-controls.spec.ts::TC_004 - Remove and restore the checkbox [chromium],passed,2026-11-11T07:59:39.170Z,
+the-internet/dynamic-controls.spec.ts::TC_005 - Enable input and enter text [chromium],passed,2026-11-11T07:59:39.542Z,
+the-internet/dynamic-controls.spec.ts::TC_006 - Disable an enabled input [chromium],passed,2026-11-11T07:59:40.477Z,
+the-internet/dynamic-loading.spec.ts::TC_001 - Existing hidden element becomes visible [chromium],passed,2026-11-11T07:59:40.716Z,
+the-internet/dynamic-loading.spec.ts::TC_002 - Dynamically inserted result appears after Start [chromium],failed,2026-11-11T07:59:42.109Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('Hello World!', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect ""toBeVisible"" getByText('Hello World!', { exact: true }) with timeout 5000ms
+  - waiting for getByText('Hello World!', { exact: true })
+
+
+  21 |
+  22 |     await page.getByRole('button', { name: 'Start' }).click();
+> 23 |     await expect(result).toBeVisible();
+     |                          ^
+  24 |     await expect(result).toHaveText('Hello World!');
+  25 |   });
+  26 |
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\dynamic-loading.spec.ts:23:26"
+the-internet/dynamic-loading.spec.ts::TC_003 - Loading indicator transitions to the final result [chromium],failed,2026-11-11T07:59:46.377Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('Hello World!', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect ""toBeVisible"" getByText('Hello World!', { exact: true }) with timeout 5000ms
+  - waiting for getByText('Hello World!', { exact: true })
+
+
+  30 |
+  31 |     const result = page.getByText('Hello World!', { exact: true });
+> 32 |     await expect(result).toBeVisible();
+     |                          ^
+  33 |     await expect(page.locator('#loading')).toBeHidden();
+  34 |   });
+  35 | });
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\dynamic-loading.spec.ts:32:26"
+the-internet/form-authentication.spec.ts::TC_013 - Valid credentials open the secure area [chromium],passed,2026-11-11T07:59:46.390Z,
+the-internet/form-authentication.spec.ts::TC_014 - Invalid username is rejected [chromium],passed,2026-11-11T07:59:49.728Z,
+the-internet/form-authentication.spec.ts::TC_015 - Invalid password is rejected [chromium],passed,2026-11-11T07:59:50.666Z,
+the-internet/javascript-alerts.spec.ts::TC_022 - Accept JavaScript alert [chromium],timedOut,2026-11-11T07:59:51.687Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Alert' })
+    - locator resolved to <button onclick=""jsAlert()"">Click for JS Alert</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+   7 |     await page.goto(`${baseUrl}/javascript_alerts`);
+   8 |     const dialogPromise = page.waitForEvent('dialog');
+>  9 |     await page.getByRole('button', { name: 'Click for JS Alert' }).click();
+     |                                                                    ^
+  10 |     const dialog = await dialogPromise;
+  11 |
+  12 |     expect(dialog.type()).toBe('alert');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:9:68"
+the-internet/javascript-alerts.spec.ts::TC_023 - Cancel JavaScript confirmation [chromium],timedOut,2026-11-11T07:59:52.169Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Confirm' })
+    - locator resolved to <button onclick=""jsConfirm()"">Click for JS Confirm</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+  19 |     await page.goto(`${baseUrl}/javascript_alerts`);
+  20 |     const dialogPromise = page.waitForEvent('dialog');
+> 21 |     await page.getByRole('button', { name: 'Click for JS Confirm' }).click();
+     |                                                                      ^
+  22 |     const dialog = await dialogPromise;
+  23 |
+  24 |     expect(dialog.type()).toBe('confirm');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:21:70"
+the-internet/javascript-alerts.spec.ts::TC_024 - Submit text through JavaScript prompt [chromium],timedOut,2026-11-11T07:59:55.049Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Prompt' })
+    - locator resolved to <button onclick=""jsPrompt()"">Click for JS Prompt</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+  31 |     await page.goto(`${baseUrl}/javascript_alerts`);
+  32 |     const dialogPromise = page.waitForEvent('dialog');
+> 33 |     await page.getByRole('button', { name: 'Click for JS Prompt' }).click();
+     |                                                                     ^
+  34 |     const dialog = await dialogPromise;
+  35 |
+  36 |     expect(dialog.type()).toBe('prompt');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:33:69"
+the-internet/multiple-windows.spec.ts::TC_028 - Click Here opens a new window [chromium],passed,2026-11-11T07:59:56.086Z,
+the-internet/multiple-windows.spec.ts::TC_029 - Parent remains on the opening page after popup opens [chromium],passed,2026-11-11T07:59:55.915Z,
+the-internet/multiple-windows.spec.ts::TC_030 - New Window route is directly accessible [chromium],passed,2026-11-11T07:59:56.637Z,
+the-internet/status-codes.spec.ts::TC_025 - Status Codes 200 endpoint responds successfully [chromium],passed,2026-11-11T07:59:59.591Z,
+the-internet/status-codes.spec.ts::TC_026 - Status Codes 301 endpoint returns its status response [chromium],passed,2026-11-11T08:00:00.662Z,
+the-internet/status-codes.spec.ts::TC_027 - Status Codes 404 endpoint shows not-found response [chromium],passed,2026-11-11T08:00:00.797Z,
+the-internet/add-remove-elements.spec.ts::TC_019 - Add Element creates a Delete control [chromium],passed,2026-11-11T08:00:32.657Z,
+the-internet/add-remove-elements.spec.ts::TC_020 - Multiple added elements have independent Delete controls [chromium],passed,2026-11-11T08:00:32.674Z,
+the-internet/add-remove-elements.spec.ts::TC_021 - Delete removes one added control [chromium],passed,2026-11-11T08:00:32.731Z,
+the-internet/challenging-dom.spec.ts::TC_010 - Table exposes expected columns and ten data rows [chromium],passed,2026-11-11T08:00:32.703Z,
+the-internet/challenging-dom.spec.ts::TC_011 - Edit action targets its row without removing table data [chromium],passed,2026-11-11T08:00:32.684Z,
+the-internet/challenging-dom.spec.ts::TC_012 - Delete action link target is row-scoped [chromium],passed,2026-11-11T08:00:32.708Z,
+the-internet/disappearing-elements.spec.ts::TC_007 - Required navigation links render [chromium],passed,2026-11-11T08:00:36.961Z,
+the-internet/disappearing-elements.spec.ts::TC_008 - Home navigation returns to the index [chromium],passed,2026-11-11T08:00:38.158Z,
+the-internet/disappearing-elements.spec.ts::TC_009 - Reload retains required links despite optional entry variation [chromium],passed,2026-11-11T08:00:38.380Z,
+the-internet/dynamic-content.spec.ts::TC_016 - Dynamic content renders three text entries [chromium],passed,2026-11-11T08:00:38.995Z,
+the-internet/dynamic-content.spec.ts::TC_017 - Content changes after refresh [chromium],passed,2026-11-11T08:00:39.386Z,
+the-internet/dynamic-content.spec.ts::TC_018 - Static-content query mode opens [chromium],passed,2026-11-11T08:00:40.999Z,
+the-internet/dynamic-controls.spec.ts::TC_004 - Remove and restore the checkbox [chromium],passed,2026-11-11T08:00:41.815Z,
+the-internet/dynamic-controls.spec.ts::TC_005 - Enable input and enter text [chromium],passed,2026-11-11T08:00:42.125Z,
+the-internet/dynamic-controls.spec.ts::TC_006 - Disable an enabled input [chromium],passed,2026-11-11T08:00:43.355Z,
+the-internet/dynamic-loading.spec.ts::TC_001 - Existing hidden element becomes visible [chromium],passed,2026-11-11T08:00:44.142Z,
+the-internet/dynamic-loading.spec.ts::TC_002 - Dynamically inserted result appears after Start [chromium],failed,2026-11-11T08:00:45.398Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('Hello World!', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect ""toBeVisible"" getByText('Hello World!', { exact: true }) with timeout 5000ms
+  - waiting for getByText('Hello World!', { exact: true })
+
+
+  21 |
+  22 |     await page.getByRole('button', { name: 'Start' }).click();
+> 23 |     await expect(result).toBeVisible();
+     |                          ^
+  24 |     await expect(result).toHaveText('Hello World!');
+  25 |   });
+  26 |
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\dynamic-loading.spec.ts:23:26"
+the-internet/dynamic-loading.spec.ts::TC_003 - Loading indicator transitions to the final result [chromium],failed,2026-11-11T08:00:46.177Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('Hello World!', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect ""toBeVisible"" getByText('Hello World!', { exact: true }) with timeout 5000ms
+  - waiting for getByText('Hello World!', { exact: true })
+
+
+  30 |
+  31 |     const result = page.getByText('Hello World!', { exact: true });
+> 32 |     await expect(result).toBeVisible();
+     |                          ^
+  33 |     await expect(page.locator('#loading')).toBeHidden();
+  34 |   });
+  35 | });
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\dynamic-loading.spec.ts:32:26"
+the-internet/form-authentication.spec.ts::TC_013 - Valid credentials open the secure area [chromium],passed,2026-11-11T08:00:49.122Z,
+the-internet/form-authentication.spec.ts::TC_014 - Invalid username is rejected [chromium],passed,2026-11-11T08:00:53.019Z,
+the-internet/form-authentication.spec.ts::TC_015 - Invalid password is rejected [chromium],passed,2026-11-11T08:00:53.701Z,
+the-internet/javascript-alerts.spec.ts::TC_022 - Accept JavaScript alert [chromium],timedOut,2026-11-11T08:00:54.021Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Alert' })
+    - locator resolved to <button onclick=""jsAlert()"">Click for JS Alert</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+   7 |     await page.goto(`${baseUrl}/javascript_alerts`);
+   8 |     const dialogPromise = page.waitForEvent('dialog');
+>  9 |     await page.getByRole('button', { name: 'Click for JS Alert' }).click();
+     |                                                                    ^
+  10 |     const dialog = await dialogPromise;
+  11 |
+  12 |     expect(dialog.type()).toBe('alert');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:9:68"
+the-internet/javascript-alerts.spec.ts::TC_023 - Cancel JavaScript confirmation [chromium],timedOut,2026-11-11T08:00:54.093Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Confirm' })
+    - locator resolved to <button onclick=""jsConfirm()"">Click for JS Confirm</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+  19 |     await page.goto(`${baseUrl}/javascript_alerts`);
+  20 |     const dialogPromise = page.waitForEvent('dialog');
+> 21 |     await page.getByRole('button', { name: 'Click for JS Confirm' }).click();
+     |                                                                      ^
+  22 |     const dialog = await dialogPromise;
+  23 |
+  24 |     expect(dialog.type()).toBe('confirm');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:21:70"
+the-internet/javascript-alerts.spec.ts::TC_024 - Submit text through JavaScript prompt [chromium],timedOut,2026-11-11T08:00:54.674Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Prompt' })
+    - locator resolved to <button onclick=""jsPrompt()"">Click for JS Prompt</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+  31 |     await page.goto(`${baseUrl}/javascript_alerts`);
+  32 |     const dialogPromise = page.waitForEvent('dialog');
+> 33 |     await page.getByRole('button', { name: 'Click for JS Prompt' }).click();
+     |                                                                     ^
+  34 |     const dialog = await dialogPromise;
+  35 |
+  36 |     expect(dialog.type()).toBe('prompt');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:33:69"
+the-internet/multiple-windows.spec.ts::TC_028 - Click Here opens a new window [chromium],passed,2026-11-11T08:00:55.624Z,
+the-internet/multiple-windows.spec.ts::TC_029 - Parent remains on the opening page after popup opens [chromium],passed,2026-11-11T08:00:59.503Z,
+the-internet/multiple-windows.spec.ts::TC_030 - New Window route is directly accessible [chromium],passed,2026-11-11T08:01:00.495Z,
+the-internet/status-codes.spec.ts::TC_025 - Status Codes 200 endpoint responds successfully [chromium],passed,2026-11-11T08:01:00.554Z,
+the-internet/status-codes.spec.ts::TC_026 - Status Codes 301 endpoint returns its status response [chromium],passed,2026-11-11T08:01:01.531Z,
+the-internet/status-codes.spec.ts::TC_027 - Status Codes 404 endpoint shows not-found response [chromium],passed,2026-11-11T08:01:03.267Z,
+the-internet/add-remove-elements.spec.ts::TC_019 - Add Element creates a Delete control [chromium],passed,2026-11-11T08:01:33.703Z,
+the-internet/add-remove-elements.spec.ts::TC_020 - Multiple added elements have independent Delete controls [chromium],passed,2026-11-11T08:01:33.722Z,
+the-internet/add-remove-elements.spec.ts::TC_021 - Delete removes one added control [chromium],passed,2026-11-11T08:01:33.696Z,
+the-internet/challenging-dom.spec.ts::TC_010 - Table exposes expected columns and ten data rows [chromium],passed,2026-11-11T08:01:33.732Z,
+the-internet/challenging-dom.spec.ts::TC_011 - Edit action targets its row without removing table data [chromium],passed,2026-11-11T08:01:33.762Z,
+the-internet/challenging-dom.spec.ts::TC_012 - Delete action link target is row-scoped [chromium],passed,2026-11-11T08:01:33.641Z,
+the-internet/disappearing-elements.spec.ts::TC_007 - Required navigation links render [chromium],passed,2026-11-11T08:01:38.866Z,
+the-internet/disappearing-elements.spec.ts::TC_008 - Home navigation returns to the index [chromium],passed,2026-11-11T08:01:39.381Z,
+the-internet/disappearing-elements.spec.ts::TC_009 - Reload retains required links despite optional entry variation [chromium],passed,2026-11-11T08:01:39.870Z,
+the-internet/dynamic-content.spec.ts::TC_016 - Dynamic content renders three text entries [chromium],passed,2026-11-11T08:01:40.012Z,
+the-internet/dynamic-content.spec.ts::TC_017 - Content changes after refresh [chromium],passed,2026-11-11T08:01:40.852Z,
+the-internet/dynamic-content.spec.ts::TC_018 - Static-content query mode opens [chromium],passed,2026-11-11T08:01:41.693Z,
+the-internet/dynamic-controls.spec.ts::TC_004 - Remove and restore the checkbox [chromium],passed,2026-11-11T08:01:42.369Z,
+the-internet/dynamic-controls.spec.ts::TC_005 - Enable input and enter text [chromium],passed,2026-11-11T08:01:44.084Z,
+the-internet/dynamic-controls.spec.ts::TC_006 - Disable an enabled input [chromium],passed,2026-11-11T08:01:44.790Z,
+the-internet/dynamic-loading.spec.ts::TC_001 - Existing hidden element becomes visible [chromium],passed,2026-11-11T08:01:44.808Z,
+the-internet/dynamic-loading.spec.ts::TC_002 - Dynamically inserted result appears after Start [chromium],failed,2026-11-11T08:01:45.555Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('Hello World!', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect ""toBeVisible"" getByText('Hello World!', { exact: true }) with timeout 5000ms
+  - waiting for getByText('Hello World!', { exact: true })
+
+
+  21 |
+  22 |     await page.getByRole('button', { name: 'Start' }).click();
+> 23 |     await expect(result).toBeVisible();
+     |                          ^
+  24 |     await expect(result).toHaveText('Hello World!');
+  25 |   });
+  26 |
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\dynamic-loading.spec.ts:23:26"
+the-internet/dynamic-loading.spec.ts::TC_003 - Loading indicator transitions to the final result [chromium],failed,2026-11-11T08:01:46.458Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('Hello World!', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect ""toBeVisible"" getByText('Hello World!', { exact: true }) with timeout 5000ms
+  - waiting for getByText('Hello World!', { exact: true })
+
+
+  30 |
+  31 |     const result = page.getByText('Hello World!', { exact: true });
+> 32 |     await expect(result).toBeVisible();
+     |                          ^
+  33 |     await expect(page.locator('#loading')).toBeHidden();
+  34 |   });
+  35 | });
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\dynamic-loading.spec.ts:32:26"
+the-internet/form-authentication.spec.ts::TC_013 - Valid credentials open the secure area [chromium],passed,2026-11-11T08:01:53.020Z,
+the-internet/form-authentication.spec.ts::TC_014 - Invalid username is rejected [chromium],passed,2026-11-11T08:01:53.473Z,
+the-internet/form-authentication.spec.ts::TC_015 - Invalid password is rejected [chromium],passed,2026-11-11T08:01:56.174Z,
+the-internet/javascript-alerts.spec.ts::TC_022 - Accept JavaScript alert [chromium],timedOut,2026-11-11T08:01:56.055Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Alert' })
+    - locator resolved to <button onclick=""jsAlert()"">Click for JS Alert</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+   7 |     await page.goto(`${baseUrl}/javascript_alerts`);
+   8 |     const dialogPromise = page.waitForEvent('dialog');
+>  9 |     await page.getByRole('button', { name: 'Click for JS Alert' }).click();
+     |                                                                    ^
+  10 |     const dialog = await dialogPromise;
+  11 |
+  12 |     expect(dialog.type()).toBe('alert');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:9:68"
+the-internet/javascript-alerts.spec.ts::TC_023 - Cancel JavaScript confirmation [chromium],timedOut,2026-11-11T08:01:56.276Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Confirm' })
+    - locator resolved to <button onclick=""jsConfirm()"">Click for JS Confirm</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+  19 |     await page.goto(`${baseUrl}/javascript_alerts`);
+  20 |     const dialogPromise = page.waitForEvent('dialog');
+> 21 |     await page.getByRole('button', { name: 'Click for JS Confirm' }).click();
+     |                                                                      ^
+  22 |     const dialog = await dialogPromise;
+  23 |
+  24 |     expect(dialog.type()).toBe('confirm');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:21:70"
+the-internet/javascript-alerts.spec.ts::TC_024 - Submit text through JavaScript prompt [chromium],timedOut,2026-11-11T08:01:57.886Z,"Test timeout of 30000ms exceeded.
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click for JS Prompt' })
+    - locator resolved to <button onclick=""jsPrompt()"">Click for JS Prompt</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+
+  31 |     await page.goto(`${baseUrl}/javascript_alerts`);
+  32 |     const dialogPromise = page.waitForEvent('dialog');
+> 33 |     await page.getByRole('button', { name: 'Click for JS Prompt' }).click();
+     |                                                                     ^
+  34 |     const dialog = await dialogPromise;
+  35 |
+  36 |     expect(dialog.type()).toBe('prompt');
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\the-internet\javascript-alerts.spec.ts:33:69"
+the-internet/multiple-windows.spec.ts::TC_028 - Click Here opens a new window [chromium],passed,2026-11-11T08:01:58.704Z,
+the-internet/multiple-windows.spec.ts::TC_029 - Parent remains on the opening page after popup opens [chromium],passed,2026-11-11T08:02:00.732Z,
+the-internet/multiple-windows.spec.ts::TC_030 - New Window route is directly accessible [chromium],passed,2026-11-11T08:02:01.036Z,
+the-internet/status-codes.spec.ts::TC_025 - Status Codes 200 endpoint responds successfully [chromium],passed,2026-11-11T08:02:02.065Z,
+the-internet/status-codes.spec.ts::TC_026 - Status Codes 301 endpoint returns its status response [chromium],passed,2026-11-11T08:02:04.026Z,
+the-internet/status-codes.spec.ts::TC_027 - Status Codes 404 endpoint shows not-found response [chromium],passed,2026-11-11T08:02:05.219Z,

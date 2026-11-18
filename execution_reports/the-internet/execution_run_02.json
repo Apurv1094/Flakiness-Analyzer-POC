@@ -1,0 +1,1427 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/the-internet",
+      "--project=chromium",
+      "--retries=0",
+      "--reporter=json"
+    ],
+    "configFile": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\playwright.config.ts",
+    "rootDir": "C:/Users/apurv.singh/playwright-flakiness-poc/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 6
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/apurv.singh/playwright-flakiness-poc/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 6
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/apurv.singh/playwright-flakiness-poc/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 6
+        },
+        "name": "chromium",
+        "testDir": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests",
+        "snapshotDir": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "trace": "on-first-retry",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "the-internet\\add-remove-elements.spec.ts",
+      "file": "the-internet/add-remove-elements.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Add/Remove Elements",
+          "file": "the-internet/add-remove-elements.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_019 - Add Element creates a Delete control",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5629,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:26.085Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0bbbf9e1a45228409eba-5bfa8d51961e01ec692f",
+              "file": "the-internet/add-remove-elements.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "TC_020 - Multiple added elements have independent Delete controls",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5065,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:26.117Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0bbbf9e1a45228409eba-ebe79a6ac6b274bf1fd3",
+              "file": "the-internet/add-remove-elements.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "TC_021 - Delete removes one added control",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 6844,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:26.064Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0bbbf9e1a45228409eba-292d22ebc944b24bac86",
+              "file": "the-internet/add-remove-elements.spec.ts",
+              "line": 22,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "the-internet\\challenging-dom.spec.ts",
+      "file": "the-internet/challenging-dom.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Challenging DOM",
+          "file": "the-internet/challenging-dom.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_010 - Table exposes expected columns and ten data rows",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 4116,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:26.164Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "77149304c01d08cfafc7-79c882a90fdacf4cc8af",
+              "file": "the-internet/challenging-dom.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "TC_011 - Edit action targets its row without removing table data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 4974,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:26.091Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "77149304c01d08cfafc7-0e99be4c9430218933a1",
+              "file": "the-internet/challenging-dom.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "TC_012 - Delete action link target is row-scoped",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 4845,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:26.084Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "77149304c01d08cfafc7-ca415f394fcede0f9fc0",
+              "file": "the-internet/challenging-dom.spec.ts",
+              "line": 26,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "the-internet\\disappearing-elements.spec.ts",
+      "file": "the-internet/disappearing-elements.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Disappearing Elements",
+          "file": "the-internet/disappearing-elements.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_007 - Required navigation links render",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 3735,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:30.529Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5431e788d38dd24ab1fd-aee45f82a39d7ed1940e",
+              "file": "the-internet/disappearing-elements.spec.ts",
+              "line": 8,
+              "column": 7
+            },
+            {
+              "title": "TC_008 - Home navigation returns to the index",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 5254,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:31.204Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5431e788d38dd24ab1fd-f02e517237bdf3891b36",
+              "file": "the-internet/disappearing-elements.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "TC_009 - Reload retains required links despite optional entry variation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 3506,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:31.356Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5431e788d38dd24ab1fd-c56c193f718043659f45",
+              "file": "the-internet/disappearing-elements.spec.ts",
+              "line": 30,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "the-internet\\dynamic-content.spec.ts",
+      "file": "the-internet/dynamic-content.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dynamic Content",
+          "file": "the-internet/dynamic-content.spec.ts",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_016 - Dynamic content renders three text entries",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 4874,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:31.426Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "35891a7876cf88a6473e-1cc5b9c3973e1a171006",
+              "file": "the-internet/dynamic-content.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "TC_017 - Content changes after refresh",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6016,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:32.010Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "35891a7876cf88a6473e-32f80e914329d4c84f7a",
+              "file": "the-internet/dynamic-content.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "TC_018 - Static-content query mode opens",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 6987,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:33.207Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "35891a7876cf88a6473e-0782a9a9690aca174177",
+              "file": "the-internet/dynamic-content.spec.ts",
+              "line": 37,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "the-internet\\dynamic-controls.spec.ts",
+      "file": "the-internet/dynamic-controls.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dynamic Controls",
+          "file": "the-internet/dynamic-controls.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_004 - Remove and restore the checkbox",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 12337,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:34.277Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13d8a43a92b21c490622-958b4698ead8685517eb",
+              "file": "the-internet/dynamic-controls.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "TC_005 - Enable input and enter text",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 8947,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:34.876Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13d8a43a92b21c490622-2d48089fb933959c85ad",
+              "file": "the-internet/dynamic-controls.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "TC_006 - Disable an enabled input",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 11598,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:36.318Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13d8a43a92b21c490622-7f6e409faff3e1b63d2d",
+              "file": "the-internet/dynamic-controls.spec.ts",
+              "line": 31,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "the-internet\\dynamic-loading.spec.ts",
+      "file": "the-internet/dynamic-loading.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dynamic Loading",
+          "file": "the-internet/dynamic-loading.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_001 - Existing hidden element becomes visible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 11522,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:36.470Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2a41b8fa5271bad05ca6-060abc607412e1e62a67",
+              "file": "the-internet/dynamic-loading.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "TC_002 - Dynamically inserted result appears after Start",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9197,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Hello World!', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Hello World!', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Hello World!', { exact: true })\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Hello World!', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Hello World!', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Hello World!', { exact: true })\u001b[22m\n\n    at C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\dynamic-loading.spec.ts:23:26",
+                        "location": {
+                          "file": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\dynamic-loading.spec.ts",
+                          "column": 26,
+                          "line": 23
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Start'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Hello World!'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\dynamic-loading.spec.ts",
+                            "column": 26,
+                            "line": 23
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Hello World!', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Hello World!', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Hello World!', { exact: true })\u001b[22m\n\n\n  21 |\n  22 |     await page.getByRole('button', { name: 'Start' }).click();\n> 23 |     await expect(result).toBeVisible();\n     |                          ^\n  24 |     await expect(result).toHaveText('Hello World!');\n  25 |   });\n  26 |\n    at C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\dynamic-loading.spec.ts:23:26"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:38.044Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\test-results\\the-internet-dynamic-loadi-0e8ef--result-appears-after-Start-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\dynamic-loading.spec.ts",
+                        "column": 26,
+                        "line": 23
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "2a41b8fa5271bad05ca6-76e9b409408af9db2dd7",
+              "file": "the-internet/dynamic-loading.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "TC_003 - Loading indicator transitions to the final result",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 8435,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Hello World!', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Hello World!', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Hello World!', { exact: true })\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Hello World!', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Hello World!', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Hello World!', { exact: true })\u001b[22m\n\n    at C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\dynamic-loading.spec.ts:32:26",
+                        "location": {
+                          "file": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\dynamic-loading.spec.ts",
+                          "column": 26,
+                          "line": 32
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 30 |\u001b[39m\n \u001b[90m 31 |\u001b[39m     \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Hello World!'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m     \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#loading'\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[33m;\u001b[39m\n \u001b[90m 34 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 35 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\dynamic-loading.spec.ts",
+                            "column": 26,
+                            "line": 32
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Hello World!', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Hello World!', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Hello World!', { exact: true })\u001b[22m\n\n\n  30 |\n  31 |     const result = page.getByText('Hello World!', { exact: true });\n> 32 |     await expect(result).toBeVisible();\n     |                          ^\n  33 |     await expect(page.locator('#loading')).toBeHidden();\n  34 |   });\n  35 | });\n    at C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\dynamic-loading.spec.ts:32:26"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:40.206Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\test-results\\the-internet-dynamic-loadi-625da-sitions-to-the-final-result-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\dynamic-loading.spec.ts",
+                        "column": 26,
+                        "line": 32
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "2a41b8fa5271bad05ca6-441ff42c2ce841e6549d",
+              "file": "the-internet/dynamic-loading.spec.ts",
+              "line": 27,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "the-internet\\form-authentication.spec.ts",
+      "file": "the-internet/form-authentication.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Form Authentication",
+          "file": "the-internet/form-authentication.spec.ts",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_013 - Valid credentials open the secure area",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 4848,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:43.838Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d1f75b7a51ef7d670181-baf99d266662b5c97767",
+              "file": "the-internet/form-authentication.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "TC_014 - Invalid username is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 5319,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:46.628Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d1f75b7a51ef7d670181-8ad2ce20949be545419b",
+              "file": "the-internet/form-authentication.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "TC_015 - Invalid password is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7515,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:47.801Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d1f75b7a51ef7d670181-8ed0b9dfb9d3500e046e",
+              "file": "the-internet/form-authentication.spec.ts",
+              "line": 28,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "the-internet\\javascript-alerts.spec.ts",
+      "file": "the-internet/javascript-alerts.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "JavaScript Alerts",
+          "file": "the-internet/javascript-alerts.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_022 - Accept JavaScript alert",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 35070,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\javascript-alerts.spec.ts",
+                            "column": 68,
+                            "line": 9
+                          },
+                          "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Click for JS Alert' })\u001b[22m\n\u001b[2m    - locator resolved to <button onclick=\"jsAlert()\">Click for JS Alert</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n   7 |     await page.goto(`${baseUrl}/javascript_alerts`);\n   8 |     const dialogPromise = page.waitForEvent('dialog');\n>  9 |     await page.getByRole('button', { name: 'Click for JS Alert' }).click();\n     |                                                                    ^\n  10 |     const dialog = await dialogPromise;\n  11 |\n  12 |     expect(dialog.type()).toBe('alert');\n    at C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\javascript-alerts.spec.ts:9:68"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:47.939Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\test-results\\the-internet-javascript-al-3bc3c-2---Accept-JavaScript-alert-chromium\\error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "94f1da3585c032352ec2-f71562fcf6ace643a167",
+              "file": "the-internet/javascript-alerts.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "TC_023 - Cancel JavaScript confirmation",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "timedOut",
+                      "duration": 35092,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\javascript-alerts.spec.ts",
+                            "column": 70,
+                            "line": 21
+                          },
+                          "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Click for JS Confirm' })\u001b[22m\n\u001b[2m    - locator resolved to <button onclick=\"jsConfirm()\">Click for JS Confirm</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n  19 |     await page.goto(`${baseUrl}/javascript_alerts`);\n  20 |     const dialogPromise = page.waitForEvent('dialog');\n> 21 |     await page.getByRole('button', { name: 'Click for JS Confirm' }).click();\n     |                                                                      ^\n  22 |     const dialog = await dialogPromise;\n  23 |\n  24 |     expect(dialog.type()).toBe('confirm');\n    at C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\javascript-alerts.spec.ts:21:70"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:48.009Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\test-results\\the-internet-javascript-al-206b0-cel-JavaScript-confirmation-chromium\\error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "94f1da3585c032352ec2-6eb3816ccbaa5244ed02",
+              "file": "the-internet/javascript-alerts.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "TC_024 - Submit text through JavaScript prompt",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "timedOut",
+                      "duration": 35066,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\javascript-alerts.spec.ts",
+                            "column": 69,
+                            "line": 33
+                          },
+                          "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Click for JS Prompt' })\u001b[22m\n\u001b[2m    - locator resolved to <button onclick=\"jsPrompt()\">Click for JS Prompt</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n  31 |     await page.goto(`${baseUrl}/javascript_alerts`);\n  32 |     const dialogPromise = page.waitForEvent('dialog');\n> 33 |     await page.getByRole('button', { name: 'Click for JS Prompt' }).click();\n     |                                                                     ^\n  34 |     const dialog = await dialogPromise;\n  35 |\n  36 |     expect(dialog.type()).toBe('prompt');\n    at C:\\Users\\apurv.singh\\playwright-flakiness-poc\\tests\\the-internet\\javascript-alerts.spec.ts:33:69"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:48.702Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\apurv.singh\\playwright-flakiness-poc\\test-results\\the-internet-javascript-al-fb848-t-through-JavaScript-prompt-chromium\\error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "94f1da3585c032352ec2-97c71c4152e2786478be",
+              "file": "the-internet/javascript-alerts.spec.ts",
+              "line": 30,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "the-internet\\multiple-windows.spec.ts",
+      "file": "the-internet/multiple-windows.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Multiple Windows",
+          "file": "the-internet/multiple-windows.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_028 - Click Here opens a new window",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 7160,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:49.222Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "694d482e7af38b10fbd2-564f153ab0aec0d5560c",
+              "file": "the-internet/multiple-windows.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "TC_029 - Parent remains on the opening page after popup opens",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 6469,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:51.960Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "694d482e7af38b10fbd2-1c859c0b5484a281d2b8",
+              "file": "the-internet/multiple-windows.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "TC_030 - New Window route is directly accessible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1075,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:55.473Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "694d482e7af38b10fbd2-5d9efb3a54ba319486a9",
+              "file": "the-internet/multiple-windows.spec.ts",
+              "line": 27,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "the-internet\\status-codes.spec.ts",
+      "file": "the-internet/status-codes.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Status Codes",
+          "file": "the-internet/status-codes.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_025 - Status Codes 200 endpoint responds successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3102,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:56.566Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d7d78f41ba2b5ca0bef3-6d260d4346b403830553",
+              "file": "the-internet/status-codes.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "TC_026 - Status Codes 301 endpoint returns its status response",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 4470,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:56.572Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d7d78f41ba2b5ca0bef3-b1df88c84ec7b54156e6",
+              "file": "the-internet/status-codes.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "TC_027 - Status Codes 404 endpoint shows not-found response",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 4081,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-11T07:58:58.442Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d7d78f41ba2b5ca0bef3-0f5e68206c94d76849b2",
+              "file": "the-internet/status-codes.spec.ts",
+              "line": 25,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-11T07:58:25.247Z",
+    "duration": 58816.176,
+    "expected": 25,
+    "skipped": 0,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}

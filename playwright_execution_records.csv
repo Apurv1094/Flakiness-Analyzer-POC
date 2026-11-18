@@ -1,0 +1,261 @@
+test_name,status,execution_timestamp,error_message
+saucedemo/cart.spec.ts::CART_TC_001 - Add one product and verify cart contents [chromium],passed,2026-11-02T07:47:28.652Z,
+saucedemo/cart.spec.ts::CART_TC_002 - Multiple distinct products appear as separate cart rows [chromium],passed,2026-11-02T07:47:28.602Z,
+saucedemo/cart.spec.ts::CART_TC_003 - Removing one cart item preserves the other [chromium],passed,2026-11-02T07:47:28.628Z,
+saucedemo/cart.spec.ts::CART_TC_004 - Removing the final item leaves an empty cart [chromium],passed,2026-11-02T07:47:28.648Z,
+saucedemo/cart.spec.ts::CART_TC_005 - Remove from product listing clears cart state [chromium],passed,2026-11-02T07:47:28.678Z,
+saucedemo/cart.spec.ts::CART_TC_006 - A selected product has quantity one and cannot be duplicated by the add toggle [chromium],passed,2026-11-02T07:47:28.634Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_001 - Empty checkout form requires first name [chromium],passed,2026-11-02T07:47:29.906Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_002 - Checkout requires last name [chromium],passed,2026-11-02T07:47:29.978Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_003 - Checkout requires postal code [chromium],passed,2026-11-02T07:47:30.017Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_004 - Valid checkout information produces the expected overview totals [chromium],passed,2026-11-02T07:47:30.105Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_005 - Canceling checkout information returns to cart and preserves items [chromium],passed,2026-11-02T07:47:30.121Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_006 - Finishing checkout confirms the order and clears the cart [chromium],passed,2026-11-02T07:47:30.146Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_007 - Empty-cart checkout shows zero totals and completes [chromium],passed,2026-11-02T07:47:31.049Z,
+saucedemo/login.spec.ts::LOGIN_TC_001 - Standard user logs in successfully [chromium],passed,2026-11-02T07:47:31.104Z,
+saucedemo/login.spec.ts::LOGIN_TC_002 - Empty username and password are rejected [chromium],passed,2026-11-02T07:47:31.161Z,
+saucedemo/login.spec.ts::LOGIN_TC_003 - Missing password is rejected [chromium],passed,2026-11-02T07:47:31.191Z,
+saucedemo/login.spec.ts::LOGIN_TC_004 - Invalid credentials are rejected [chromium],passed,2026-11-02T07:47:31.243Z,
+saucedemo/login.spec.ts::LOGIN_TC_005 - Locked-out user cannot log in [chromium],passed,2026-11-02T07:47:31.542Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_001 - Logout returns the user to the login page [chromium],passed,2026-11-02T07:47:31.735Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_002 - Logged-out user cannot open inventory directly [chromium],passed,2026-11-02T07:47:31.787Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_003 - Cart contents persist after logout and re-login in the same context [chromium],passed,2026-11-02T07:47:31.811Z,
+saucedemo/products.spec.ts::PRODUCT_TC_001 - Default product listing shows all six products [chromium],passed,2026-11-02T07:47:32.010Z,
+saucedemo/products.spec.ts::PRODUCT_TC_002 - Product detail shows backpack information and returns to catalog [chromium],passed,2026-11-02T07:47:32.011Z,
+saucedemo/products.spec.ts::PRODUCT_TC_003 - Adding a product from details updates its action and cart badge [chromium],failed,2026-11-02T07:47:32.347Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('button', { name: 'Add to cart' })
+Expected: visible
+Error: strict mode violation: getByRole('button', { name: 'Add to cart' }) resolved to 6 elements:
+    1) <button id=""add-to-cart-sauce-labs-backpack"" name=""add-to-cart-sauce-labs-backpack"" data-test=""add-to-cart-sauce-labs-backpack"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-backpack""]')
+    2) <button id=""add-to-cart-sauce-labs-bike-light"" name=""add-to-cart-sauce-labs-bike-light"" data-test=""add-to-cart-sauce-labs-bike-light"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-bike-light""]')
+    3) <button id=""add-to-cart-sauce-labs-bolt-t-shirt"" name=""add-to-cart-sauce-labs-bolt-t-shirt"" data-test=""add-to-cart-sauce-labs-bolt-t-shirt"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-bolt-t-shirt""]')
+    4) <button id=""add-to-cart-sauce-labs-fleece-jacket"" name=""add-to-cart-sauce-labs-fleece-jacket"" class=""btn btn_primary btn_small btn_inventory "" data-test=""add-to-cart-sauce-labs-fleece-jacket"">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-fleece-jacket""]')
+    5) <button id=""add-to-cart-sauce-labs-onesie"" name=""add-to-cart-sauce-labs-onesie"" data-test=""add-to-cart-sauce-labs-onesie"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-onesie""]')
+    6) <button class=""btn btn_primary btn_small btn_inventory "" id=""add-to-cart-test.allthethings()-t-shirt-(red)"" name=""add-to-cart-test.allthethings()-t-shirt-(red)"" data-test=""add-to-cart-test.allthethings()-t-shirt-(red)"">Add to cart</button> aka locator('[data-test=""add-to-cart-test.allthethings()-t-shirt-(red)""]')
+
+Call log:
+  - Expect ""toBeVisible"" getByRole('button', { name: 'Add to cart' }) with timeout 5000ms
+  - waiting for getByRole('button', { name: 'Add to cart' })
+
+
+  69 |     await page.locator('[data-test=""item-4-title-link""]').click();
+  70 |     await expect(page).toHaveURL('https://www.saucedemo.com/inventory-item.html?id=4');
+> 71 |     await expect(page.getByRole('button', { name: 'Add to cart' })).toBeVisible();
+     |                                                                     ^
+  72 |
+  73 |     // 2. Add the backpack and verify the action changes and cart badge displays one item.
+  74 |     await page.getByRole('button', { name: 'Add to cart' }).click();
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\saucedemo\products.spec.ts:71:69"
+saucedemo/sorting.spec.ts::SORT_TC_001 - Products default to name ascending [chromium],passed,2026-11-02T07:47:32.675Z,
+saucedemo/sorting.spec.ts::SORT_TC_002 - Name descending sort orders products Z to A [chromium],passed,2026-11-02T07:47:32.754Z,
+saucedemo/sorting.spec.ts::SORT_TC_003 - Price ascending sort orders products low to high [chromium],passed,2026-11-02T07:47:33.414Z,
+saucedemo/sorting.spec.ts::SORT_TC_004 - Price descending sort orders products high to low [chromium],passed,2026-11-02T07:47:33.303Z,
+saucedemo/cart.spec.ts::CART_TC_001 - Add one product and verify cart contents [chromium],passed,2026-11-02T07:47:36.038Z,
+saucedemo/cart.spec.ts::CART_TC_002 - Multiple distinct products appear as separate cart rows [chromium],passed,2026-11-02T07:47:36.060Z,
+saucedemo/cart.spec.ts::CART_TC_003 - Removing one cart item preserves the other [chromium],passed,2026-11-02T07:47:36.033Z,
+saucedemo/cart.spec.ts::CART_TC_004 - Removing the final item leaves an empty cart [chromium],passed,2026-11-02T07:47:36.054Z,
+saucedemo/cart.spec.ts::CART_TC_005 - Remove from product listing clears cart state [chromium],passed,2026-11-02T07:47:36.062Z,
+saucedemo/cart.spec.ts::CART_TC_006 - A selected product has quantity one and cannot be duplicated by the add toggle [chromium],passed,2026-11-02T07:47:36.078Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_001 - Empty checkout form requires first name [chromium],passed,2026-11-02T07:47:37.313Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_002 - Checkout requires last name [chromium],passed,2026-11-02T07:47:37.339Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_003 - Checkout requires postal code [chromium],passed,2026-11-02T07:47:37.497Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_004 - Valid checkout information produces the expected overview totals [chromium],passed,2026-11-02T07:47:37.595Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_005 - Canceling checkout information returns to cart and preserves items [chromium],passed,2026-11-02T07:47:37.628Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_006 - Finishing checkout confirms the order and clears the cart [chromium],passed,2026-11-02T07:47:37.670Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_007 - Empty-cart checkout shows zero totals and completes [chromium],passed,2026-11-02T07:47:38.353Z,
+saucedemo/login.spec.ts::LOGIN_TC_001 - Standard user logs in successfully [chromium],passed,2026-11-02T07:47:38.482Z,
+saucedemo/login.spec.ts::LOGIN_TC_002 - Empty username and password are rejected [chromium],passed,2026-11-02T07:47:38.486Z,
+saucedemo/login.spec.ts::LOGIN_TC_003 - Missing password is rejected [chromium],passed,2026-11-02T07:47:38.592Z,
+saucedemo/login.spec.ts::LOGIN_TC_004 - Invalid credentials are rejected [chromium],passed,2026-11-02T07:47:38.599Z,
+saucedemo/login.spec.ts::LOGIN_TC_005 - Locked-out user cannot log in [chromium],passed,2026-11-02T07:47:38.989Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_001 - Logout returns the user to the login page [chromium],passed,2026-11-02T07:47:39.023Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_002 - Logged-out user cannot open inventory directly [chromium],passed,2026-11-02T07:47:39.229Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_003 - Cart contents persist after logout and re-login in the same context [chromium],passed,2026-11-02T07:47:39.375Z,
+saucedemo/products.spec.ts::PRODUCT_TC_001 - Default product listing shows all six products [chromium],passed,2026-11-02T07:47:39.400Z,
+saucedemo/products.spec.ts::PRODUCT_TC_002 - Product detail shows backpack information and returns to catalog [chromium],passed,2026-11-02T07:47:39.561Z,
+saucedemo/products.spec.ts::PRODUCT_TC_003 - Adding a product from details updates its action and cart badge [chromium],failed,2026-11-02T07:47:39.564Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('button', { name: 'Add to cart' })
+Expected: visible
+Error: strict mode violation: getByRole('button', { name: 'Add to cart' }) resolved to 6 elements:
+    1) <button id=""add-to-cart-sauce-labs-backpack"" name=""add-to-cart-sauce-labs-backpack"" data-test=""add-to-cart-sauce-labs-backpack"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-backpack""]')
+    2) <button id=""add-to-cart-sauce-labs-bike-light"" name=""add-to-cart-sauce-labs-bike-light"" data-test=""add-to-cart-sauce-labs-bike-light"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-bike-light""]')
+    3) <button id=""add-to-cart-sauce-labs-bolt-t-shirt"" name=""add-to-cart-sauce-labs-bolt-t-shirt"" data-test=""add-to-cart-sauce-labs-bolt-t-shirt"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-bolt-t-shirt""]')
+    4) <button id=""add-to-cart-sauce-labs-fleece-jacket"" name=""add-to-cart-sauce-labs-fleece-jacket"" class=""btn btn_primary btn_small btn_inventory "" data-test=""add-to-cart-sauce-labs-fleece-jacket"">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-fleece-jacket""]')
+    5) <button id=""add-to-cart-sauce-labs-onesie"" name=""add-to-cart-sauce-labs-onesie"" data-test=""add-to-cart-sauce-labs-onesie"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-onesie""]')
+    6) <button class=""btn btn_primary btn_small btn_inventory "" id=""add-to-cart-test.allthethings()-t-shirt-(red)"" name=""add-to-cart-test.allthethings()-t-shirt-(red)"" data-test=""add-to-cart-test.allthethings()-t-shirt-(red)"">Add to cart</button> aka locator('[data-test=""add-to-cart-test.allthethings()-t-shirt-(red)""]')
+
+Call log:
+  - Expect ""toBeVisible"" getByRole('button', { name: 'Add to cart' }) with timeout 5000ms
+  - waiting for getByRole('button', { name: 'Add to cart' })
+
+
+  69 |     await page.locator('[data-test=""item-4-title-link""]').click();
+  70 |     await expect(page).toHaveURL('https://www.saucedemo.com/inventory-item.html?id=4');
+> 71 |     await expect(page.getByRole('button', { name: 'Add to cart' })).toBeVisible();
+     |                                                                     ^
+  72 |
+  73 |     // 2. Add the backpack and verify the action changes and cart badge displays one item.
+  74 |     await page.getByRole('button', { name: 'Add to cart' }).click();
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\saucedemo\products.spec.ts:71:69"
+saucedemo/sorting.spec.ts::SORT_TC_001 - Products default to name ascending [chromium],passed,2026-11-02T07:47:40.045Z,
+saucedemo/sorting.spec.ts::SORT_TC_002 - Name descending sort orders products Z to A [chromium],passed,2026-11-02T07:47:40.633Z,
+saucedemo/sorting.spec.ts::SORT_TC_003 - Price ascending sort orders products low to high [chromium],passed,2026-11-02T07:47:40.477Z,
+saucedemo/sorting.spec.ts::SORT_TC_004 - Price descending sort orders products high to low [chromium],passed,2026-11-02T07:47:40.680Z,
+saucedemo/cart.spec.ts::CART_TC_001 - Add one product and verify cart contents [chromium],passed,2026-11-02T07:47:43.218Z,
+saucedemo/cart.spec.ts::CART_TC_002 - Multiple distinct products appear as separate cart rows [chromium],passed,2026-11-02T07:47:43.159Z,
+saucedemo/cart.spec.ts::CART_TC_003 - Removing one cart item preserves the other [chromium],passed,2026-11-02T07:47:43.206Z,
+saucedemo/cart.spec.ts::CART_TC_004 - Removing the final item leaves an empty cart [chromium],passed,2026-11-02T07:47:43.192Z,
+saucedemo/cart.spec.ts::CART_TC_005 - Remove from product listing clears cart state [chromium],passed,2026-11-02T07:47:43.216Z,
+saucedemo/cart.spec.ts::CART_TC_006 - A selected product has quantity one and cannot be duplicated by the add toggle [chromium],passed,2026-11-02T07:47:43.249Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_001 - Empty checkout form requires first name [chromium],passed,2026-11-02T07:47:44.262Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_002 - Checkout requires last name [chromium],passed,2026-11-02T07:47:44.586Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_003 - Checkout requires postal code [chromium],passed,2026-11-02T07:47:44.647Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_004 - Valid checkout information produces the expected overview totals [chromium],passed,2026-11-02T07:47:44.748Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_005 - Canceling checkout information returns to cart and preserves items [chromium],passed,2026-11-02T07:47:44.793Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_006 - Finishing checkout confirms the order and clears the cart [chromium],passed,2026-11-02T07:47:44.817Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_007 - Empty-cart checkout shows zero totals and completes [chromium],passed,2026-11-02T07:47:45.297Z,
+saucedemo/login.spec.ts::LOGIN_TC_001 - Standard user logs in successfully [chromium],passed,2026-11-02T07:47:45.592Z,
+saucedemo/login.spec.ts::LOGIN_TC_002 - Empty username and password are rejected [chromium],passed,2026-11-02T07:47:45.611Z,
+saucedemo/login.spec.ts::LOGIN_TC_003 - Missing password is rejected [chromium],passed,2026-11-02T07:47:45.733Z,
+saucedemo/login.spec.ts::LOGIN_TC_004 - Invalid credentials are rejected [chromium],passed,2026-11-02T07:47:45.871Z,
+saucedemo/login.spec.ts::LOGIN_TC_005 - Locked-out user cannot log in [chromium],passed,2026-11-02T07:47:46.043Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_001 - Logout returns the user to the login page [chromium],passed,2026-11-02T07:47:46.178Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_002 - Logged-out user cannot open inventory directly [chromium],passed,2026-11-02T07:47:46.239Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_003 - Cart contents persist after logout and re-login in the same context [chromium],passed,2026-11-02T07:47:46.271Z,
+saucedemo/products.spec.ts::PRODUCT_TC_001 - Default product listing shows all six products [chromium],passed,2026-11-02T07:47:46.339Z,
+saucedemo/products.spec.ts::PRODUCT_TC_002 - Product detail shows backpack information and returns to catalog [chromium],passed,2026-11-02T07:47:46.666Z,
+saucedemo/products.spec.ts::PRODUCT_TC_003 - Adding a product from details updates its action and cart badge [chromium],failed,2026-11-02T07:47:46.928Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('button', { name: 'Add to cart' })
+Expected: visible
+Error: strict mode violation: getByRole('button', { name: 'Add to cart' }) resolved to 6 elements:
+    1) <button id=""add-to-cart-sauce-labs-backpack"" name=""add-to-cart-sauce-labs-backpack"" data-test=""add-to-cart-sauce-labs-backpack"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-backpack""]')
+    2) <button id=""add-to-cart-sauce-labs-bike-light"" name=""add-to-cart-sauce-labs-bike-light"" data-test=""add-to-cart-sauce-labs-bike-light"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-bike-light""]')
+    3) <button id=""add-to-cart-sauce-labs-bolt-t-shirt"" name=""add-to-cart-sauce-labs-bolt-t-shirt"" data-test=""add-to-cart-sauce-labs-bolt-t-shirt"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-bolt-t-shirt""]')
+    4) <button id=""add-to-cart-sauce-labs-fleece-jacket"" name=""add-to-cart-sauce-labs-fleece-jacket"" class=""btn btn_primary btn_small btn_inventory "" data-test=""add-to-cart-sauce-labs-fleece-jacket"">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-fleece-jacket""]')
+    5) <button id=""add-to-cart-sauce-labs-onesie"" name=""add-to-cart-sauce-labs-onesie"" data-test=""add-to-cart-sauce-labs-onesie"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-onesie""]')
+    6) <button class=""btn btn_primary btn_small btn_inventory "" id=""add-to-cart-test.allthethings()-t-shirt-(red)"" name=""add-to-cart-test.allthethings()-t-shirt-(red)"" data-test=""add-to-cart-test.allthethings()-t-shirt-(red)"">Add to cart</button> aka locator('[data-test=""add-to-cart-test.allthethings()-t-shirt-(red)""]')
+
+Call log:
+  - Expect ""toBeVisible"" getByRole('button', { name: 'Add to cart' }) with timeout 5000ms
+  - waiting for getByRole('button', { name: 'Add to cart' })
+
+
+  69 |     await page.locator('[data-test=""item-4-title-link""]').click();
+  70 |     await expect(page).toHaveURL('https://www.saucedemo.com/inventory-item.html?id=4');
+> 71 |     await expect(page.getByRole('button', { name: 'Add to cart' })).toBeVisible();
+     |                                                                     ^
+  72 |
+  73 |     // 2. Add the backpack and verify the action changes and cart badge displays one item.
+  74 |     await page.getByRole('button', { name: 'Add to cart' }).click();
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\saucedemo\products.spec.ts:71:69"
+saucedemo/sorting.spec.ts::SORT_TC_001 - Products default to name ascending [chromium],passed,2026-11-02T07:47:47.030Z,
+saucedemo/sorting.spec.ts::SORT_TC_002 - Name descending sort orders products Z to A [chromium],passed,2026-11-02T07:47:47.639Z,
+saucedemo/sorting.spec.ts::SORT_TC_003 - Price ascending sort orders products low to high [chromium],passed,2026-11-02T07:47:48.039Z,
+saucedemo/sorting.spec.ts::SORT_TC_004 - Price descending sort orders products high to low [chromium],passed,2026-11-02T07:47:47.674Z,
+saucedemo/cart.spec.ts::CART_TC_001 - Add one product and verify cart contents [chromium],passed,2026-11-02T07:47:50.892Z,
+saucedemo/cart.spec.ts::CART_TC_002 - Multiple distinct products appear as separate cart rows [chromium],passed,2026-11-02T07:47:50.914Z,
+saucedemo/cart.spec.ts::CART_TC_003 - Removing one cart item preserves the other [chromium],passed,2026-11-02T07:47:50.914Z,
+saucedemo/cart.spec.ts::CART_TC_004 - Removing the final item leaves an empty cart [chromium],passed,2026-11-02T07:47:50.917Z,
+saucedemo/cart.spec.ts::CART_TC_005 - Remove from product listing clears cart state [chromium],passed,2026-11-02T07:47:50.903Z,
+saucedemo/cart.spec.ts::CART_TC_006 - A selected product has quantity one and cannot be duplicated by the add toggle [chromium],passed,2026-11-02T07:47:50.927Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_001 - Empty checkout form requires first name [chromium],passed,2026-11-02T07:47:52.289Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_002 - Checkout requires last name [chromium],passed,2026-11-02T07:47:52.340Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_003 - Checkout requires postal code [chromium],passed,2026-11-02T07:47:52.413Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_004 - Valid checkout information produces the expected overview totals [chromium],passed,2026-11-02T07:47:52.510Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_005 - Canceling checkout information returns to cart and preserves items [chromium],passed,2026-11-02T07:47:52.653Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_006 - Finishing checkout confirms the order and clears the cart [chromium],passed,2026-11-02T07:47:52.717Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_007 - Empty-cart checkout shows zero totals and completes [chromium],passed,2026-11-02T07:47:53.202Z,
+saucedemo/login.spec.ts::LOGIN_TC_001 - Standard user logs in successfully [chromium],passed,2026-11-02T07:47:53.242Z,
+saucedemo/login.spec.ts::LOGIN_TC_002 - Empty username and password are rejected [chromium],passed,2026-11-02T07:47:53.572Z,
+saucedemo/login.spec.ts::LOGIN_TC_003 - Missing password is rejected [chromium],passed,2026-11-02T07:47:53.635Z,
+saucedemo/login.spec.ts::LOGIN_TC_004 - Invalid credentials are rejected [chromium],passed,2026-11-02T07:47:53.785Z,
+saucedemo/login.spec.ts::LOGIN_TC_005 - Locked-out user cannot log in [chromium],passed,2026-11-02T07:47:53.791Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_001 - Logout returns the user to the login page [chromium],passed,2026-11-02T07:47:53.980Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_002 - Logged-out user cannot open inventory directly [chromium],passed,2026-11-02T07:47:54.118Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_003 - Cart contents persist after logout and re-login in the same context [chromium],passed,2026-11-02T07:47:54.159Z,
+saucedemo/products.spec.ts::PRODUCT_TC_001 - Default product listing shows all six products [chromium],passed,2026-11-02T07:47:54.305Z,
+saucedemo/products.spec.ts::PRODUCT_TC_002 - Product detail shows backpack information and returns to catalog [chromium],passed,2026-11-02T07:47:54.344Z,
+saucedemo/products.spec.ts::PRODUCT_TC_003 - Adding a product from details updates its action and cart badge [chromium],failed,2026-11-02T07:47:54.409Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('button', { name: 'Add to cart' })
+Expected: visible
+Error: strict mode violation: getByRole('button', { name: 'Add to cart' }) resolved to 6 elements:
+    1) <button id=""add-to-cart-sauce-labs-backpack"" name=""add-to-cart-sauce-labs-backpack"" data-test=""add-to-cart-sauce-labs-backpack"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-backpack""]')
+    2) <button id=""add-to-cart-sauce-labs-bike-light"" name=""add-to-cart-sauce-labs-bike-light"" data-test=""add-to-cart-sauce-labs-bike-light"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-bike-light""]')
+    3) <button id=""add-to-cart-sauce-labs-bolt-t-shirt"" name=""add-to-cart-sauce-labs-bolt-t-shirt"" data-test=""add-to-cart-sauce-labs-bolt-t-shirt"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-bolt-t-shirt""]')
+    4) <button id=""add-to-cart-sauce-labs-fleece-jacket"" name=""add-to-cart-sauce-labs-fleece-jacket"" class=""btn btn_primary btn_small btn_inventory "" data-test=""add-to-cart-sauce-labs-fleece-jacket"">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-fleece-jacket""]')
+    5) <button id=""add-to-cart-sauce-labs-onesie"" name=""add-to-cart-sauce-labs-onesie"" data-test=""add-to-cart-sauce-labs-onesie"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-onesie""]')
+    6) <button class=""btn btn_primary btn_small btn_inventory "" id=""add-to-cart-test.allthethings()-t-shirt-(red)"" name=""add-to-cart-test.allthethings()-t-shirt-(red)"" data-test=""add-to-cart-test.allthethings()-t-shirt-(red)"">Add to cart</button> aka locator('[data-test=""add-to-cart-test.allthethings()-t-shirt-(red)""]')
+
+Call log:
+  - Expect ""toBeVisible"" getByRole('button', { name: 'Add to cart' }) with timeout 5000ms
+  - waiting for getByRole('button', { name: 'Add to cart' })
+
+
+  69 |     await page.locator('[data-test=""item-4-title-link""]').click();
+  70 |     await expect(page).toHaveURL('https://www.saucedemo.com/inventory-item.html?id=4');
+> 71 |     await expect(page.getByRole('button', { name: 'Add to cart' })).toBeVisible();
+     |                                                                     ^
+  72 |
+  73 |     // 2. Add the backpack and verify the action changes and cart badge displays one item.
+  74 |     await page.getByRole('button', { name: 'Add to cart' }).click();
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\saucedemo\products.spec.ts:71:69"
+saucedemo/sorting.spec.ts::SORT_TC_001 - Products default to name ascending [chromium],passed,2026-11-02T07:47:55.080Z,
+saucedemo/sorting.spec.ts::SORT_TC_002 - Name descending sort orders products Z to A [chromium],passed,2026-11-02T07:47:55.474Z,
+saucedemo/sorting.spec.ts::SORT_TC_003 - Price ascending sort orders products low to high [chromium],passed,2026-11-02T07:47:55.189Z,
+saucedemo/sorting.spec.ts::SORT_TC_004 - Price descending sort orders products high to low [chromium],passed,2026-11-02T07:47:55.543Z,
+saucedemo/cart.spec.ts::CART_TC_001 - Add one product and verify cart contents [chromium],passed,2026-11-02T07:47:58.057Z,
+saucedemo/cart.spec.ts::CART_TC_002 - Multiple distinct products appear as separate cart rows [chromium],passed,2026-11-02T07:47:58.068Z,
+saucedemo/cart.spec.ts::CART_TC_003 - Removing one cart item preserves the other [chromium],passed,2026-11-02T07:47:58.099Z,
+saucedemo/cart.spec.ts::CART_TC_004 - Removing the final item leaves an empty cart [chromium],passed,2026-11-02T07:47:58.050Z,
+saucedemo/cart.spec.ts::CART_TC_005 - Remove from product listing clears cart state [chromium],passed,2026-11-02T07:47:58.090Z,
+saucedemo/cart.spec.ts::CART_TC_006 - A selected product has quantity one and cannot be duplicated by the add toggle [chromium],passed,2026-11-02T07:47:58.109Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_001 - Empty checkout form requires first name [chromium],passed,2026-11-02T07:47:59.316Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_002 - Checkout requires last name [chromium],passed,2026-11-02T07:47:59.353Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_003 - Checkout requires postal code [chromium],passed,2026-11-02T07:47:59.475Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_004 - Valid checkout information produces the expected overview totals [chromium],passed,2026-11-02T07:47:59.476Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_005 - Canceling checkout information returns to cart and preserves items [chromium],passed,2026-11-02T07:47:59.581Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_006 - Finishing checkout confirms the order and clears the cart [chromium],passed,2026-11-02T07:47:59.618Z,
+saucedemo/checkout.spec.ts::CHECKOUT_TC_007 - Empty-cart checkout shows zero totals and completes [chromium],passed,2026-11-02T07:48:00.430Z,
+saucedemo/login.spec.ts::LOGIN_TC_001 - Standard user logs in successfully [chromium],passed,2026-11-02T07:48:00.562Z,
+saucedemo/login.spec.ts::LOGIN_TC_002 - Empty username and password are rejected [chromium],passed,2026-11-02T07:48:00.579Z,
+saucedemo/login.spec.ts::LOGIN_TC_003 - Missing password is rejected [chromium],passed,2026-11-02T07:48:00.675Z,
+saucedemo/login.spec.ts::LOGIN_TC_004 - Invalid credentials are rejected [chromium],passed,2026-11-02T07:48:00.795Z,
+saucedemo/login.spec.ts::LOGIN_TC_005 - Locked-out user cannot log in [chromium],passed,2026-11-02T07:48:00.836Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_001 - Logout returns the user to the login page [chromium],passed,2026-11-02T07:48:01.153Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_002 - Logged-out user cannot open inventory directly [chromium],passed,2026-11-02T07:48:01.255Z,
+saucedemo/logout.spec.ts::LOGOUT_TC_003 - Cart contents persist after logout and re-login in the same context [chromium],passed,2026-11-02T07:48:01.422Z,
+saucedemo/products.spec.ts::PRODUCT_TC_001 - Default product listing shows all six products [chromium],passed,2026-11-02T07:48:01.465Z,
+saucedemo/products.spec.ts::PRODUCT_TC_002 - Product detail shows backpack information and returns to catalog [chromium],passed,2026-11-02T07:48:01.475Z,
+saucedemo/products.spec.ts::PRODUCT_TC_003 - Adding a product from details updates its action and cart badge [chromium],failed,2026-11-02T07:48:01.663Z,"Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('button', { name: 'Add to cart' })
+Expected: visible
+Error: strict mode violation: getByRole('button', { name: 'Add to cart' }) resolved to 6 elements:
+    1) <button id=""add-to-cart-sauce-labs-backpack"" name=""add-to-cart-sauce-labs-backpack"" data-test=""add-to-cart-sauce-labs-backpack"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-backpack""]')
+    2) <button id=""add-to-cart-sauce-labs-bike-light"" name=""add-to-cart-sauce-labs-bike-light"" data-test=""add-to-cart-sauce-labs-bike-light"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-bike-light""]')
+    3) <button id=""add-to-cart-sauce-labs-bolt-t-shirt"" name=""add-to-cart-sauce-labs-bolt-t-shirt"" data-test=""add-to-cart-sauce-labs-bolt-t-shirt"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-bolt-t-shirt""]')
+    4) <button id=""add-to-cart-sauce-labs-fleece-jacket"" name=""add-to-cart-sauce-labs-fleece-jacket"" class=""btn btn_primary btn_small btn_inventory "" data-test=""add-to-cart-sauce-labs-fleece-jacket"">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-fleece-jacket""]')
+    5) <button id=""add-to-cart-sauce-labs-onesie"" name=""add-to-cart-sauce-labs-onesie"" data-test=""add-to-cart-sauce-labs-onesie"" class=""btn btn_primary btn_small btn_inventory "">Add to cart</button> aka locator('[data-test=""add-to-cart-sauce-labs-onesie""]')
+    6) <button class=""btn btn_primary btn_small btn_inventory "" id=""add-to-cart-test.allthethings()-t-shirt-(red)"" name=""add-to-cart-test.allthethings()-t-shirt-(red)"" data-test=""add-to-cart-test.allthethings()-t-shirt-(red)"">Add to cart</button> aka locator('[data-test=""add-to-cart-test.allthethings()-t-shirt-(red)""]')
+
+Call log:
+  - Expect ""toBeVisible"" getByRole('button', { name: 'Add to cart' }) with timeout 5000ms
+  - waiting for getByRole('button', { name: 'Add to cart' })
+
+
+  69 |     await page.locator('[data-test=""item-4-title-link""]').click();
+  70 |     await expect(page).toHaveURL('https://www.saucedemo.com/inventory-item.html?id=4');
+> 71 |     await expect(page.getByRole('button', { name: 'Add to cart' })).toBeVisible();
+     |                                                                     ^
+  72 |
+  73 |     // 2. Add the backpack and verify the action changes and cart badge displays one item.
+  74 |     await page.getByRole('button', { name: 'Add to cart' }).click();
+    at C:\Users\apurv.singh\playwright-flakiness-poc\tests\saucedemo\products.spec.ts:71:69"
+saucedemo/sorting.spec.ts::SORT_TC_001 - Products default to name ascending [chromium],passed,2026-11-02T07:48:02.124Z,
+saucedemo/sorting.spec.ts::SORT_TC_002 - Name descending sort orders products Z to A [chromium],passed,2026-11-02T07:48:02.275Z,
+saucedemo/sorting.spec.ts::SORT_TC_003 - Price ascending sort orders products low to high [chromium],passed,2026-11-02T07:48:02.825Z,
+saucedemo/sorting.spec.ts::SORT_TC_004 - Price descending sort orders products high to low [chromium],passed,2026-11-02T07:48:02.813Z,
